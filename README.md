@@ -1,3 +1,3 @@
 # @joinnus-team/eslint-config
 
-Shared configurations for Joinus organization.
+Shared configurations for Joinnus organization.
