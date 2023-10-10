@@ -1,0 +1,46 @@
+{
+  "name": "@joinnus-team/eslint-config",
+  "version": "0.0.0",
+  "description": "Shared ESLint configurations for Joinnus organization.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinnusteam/JARCH-eslint-config.git"
+  },
+  "homepage": "https://github.com/joinnusteam/JARCH-eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/joinnusteam/JARCH-eslint-config/issues"
+  },
+  "license": "Apache-2.0",
+  "main": "./dist/presets/default.cjs",
+  "exports": {
+    ".": {
+      "require": "./dist/presets/default.cjs",
+      "default": "./dist/presets/default.cjs"
+    },
+    "./default-prettier-config": "./dist/prettier/default.json"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "build:watch": "watch 'npm run build' src",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "prettier": "^3.0.0",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-pkg": ">= 0.18.0"
+  },
+  "devDependencies": {
+    "@elegantech/prettier-multi-config": "^1.0.2",
+    "@types/node": "^18.18.4",
+    "prettier": "^3.0.3",
+    "prettier-plugin-pkg": "^0.18.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "watch": "^1.0.2"
+  }
+}

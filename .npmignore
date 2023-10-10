@@ -1,0 +1,9 @@
+*
+# Ignora all, except:
+
+!dist/presets/*.cjs
+!dist/prettier/*.json
+
+!NOTICE
+!README.md
+!LICENSE
