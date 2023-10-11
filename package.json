@@ -31,6 +31,12 @@
       "require": "./dist/presets/node-fermium.cjs",
       "default": "./dist/presets/node-fermium.cjs"
     },
+    "./node-gallium": {
+      "types": "./dist/presets/node-gallium.d.ts",
+      "import": "./dist/presets/node-gallium.mjs",
+      "require": "./dist/presets/node-gallium.cjs",
+      "default": "./dist/presets/node-gallium.cjs"
+    },
     "./rules": {
       "types": "./dist/rules/index.d.ts",
       "import": "./dist/rules/index.mjs",

@@ -3,7 +3,7 @@ import { Linter } from 'eslint';
 import { baseRules, getImportRules, getNodeRules } from '~/rules';
 
 /**
- * Config for Node.js 12 (Erbium)
+ * Config for Node.js 12 (Erbium).
  */
 const config: Linter.Config = {
   overrides: [

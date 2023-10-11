@@ -40,6 +40,5 @@ const config: Linter.Config = {
 export default config;
 
 // TODO: Create presets for different versions of node
-// 16.x	Gallium	2021-04-20
 // 18.x	Hydrogen	2023-09-18
 // 20.x	-	2023-09-28
