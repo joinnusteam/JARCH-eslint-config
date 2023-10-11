@@ -2,6 +2,7 @@
 # Ignora all, except:
 
 !dist/presets/**/*
+!dist/rules/**/*
 !dist/prettier/*.json
 
 !NOTICE

@@ -18,6 +18,12 @@
       "require": "./dist/presets/default.cjs",
       "default": "./dist/presets/default.cjs"
     },
+    "./rules": {
+      "types": "./dist/rules/index.d.ts",
+      "import": "./dist/rules/index.mjs",
+      "require": "./dist/rules/index.cjs",
+      "default": "./dist/rules/index.cjs"
+    },
     "./default-prettier-config": "./dist/prettier/default.json"
   },
   "scripts": {
