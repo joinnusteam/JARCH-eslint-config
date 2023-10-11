@@ -1,7 +1,7 @@
 *
 # Ignora all, except:
 
-!dist/presets/*.cjs
+!dist/presets/**/*
 !dist/prettier/*.json
 
 !NOTICE
