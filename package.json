@@ -14,9 +14,16 @@
   "main": "./dist/presets/default.cjs",
   "exports": {
     ".": {
+      "types": "./dist/presets/default.d.ts",
       "import": "./dist/presets/default.mjs",
       "require": "./dist/presets/default.cjs",
       "default": "./dist/presets/default.cjs"
+    },
+    "./node-erbium": {
+      "types": "./dist/presets/node-erbium.d.ts",
+      "import": "./dist/presets/node-erbium.mjs",
+      "require": "./dist/presets/node-erbium.cjs",
+      "default": "./dist/presets/node-erbium.cjs"
     },
     "./rules": {
       "types": "./dist/rules/index.d.ts",
