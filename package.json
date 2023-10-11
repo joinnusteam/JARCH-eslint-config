@@ -23,6 +23,9 @@
   "scripts": {
     "build": "unbuild",
     "build:watch": "watch 'npm run build' src",
+    "lint": "npm run lint:eslint && npm run lint:style",
+    "lint:eslint": "eslint .",
+    "lint:style": "prettier --check .",
     "prepack": "npm run build"
   },
   "peerDependencies": {
@@ -37,7 +40,10 @@
   },
   "devDependencies": {
     "@elegantech/prettier-multi-config": "^1.0.2",
+    "@types/eslint": "^8.44.4",
     "@types/node": "^18.18.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "prettier": "^3.0.3",
     "prettier-plugin-pkg": "^0.18.0",
     "typescript": "^5.2.2",

@@ -24,33 +24,27 @@ const prettierJsonConfig: OutputPlugin = {
     const files = prettierFilesNames.map((name) => bundle[name]);
 
     for (const bundleFile of files) {
-      if (bundleFile.type === 'chunk') {
-        // const file = await import(DIST_DIR + '/' + fil.fileName);
+      if (bundleFile.type === 'chunk' && bundleFile.facadeModuleId) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const sourceFile = await import(bundleFile.facadeModuleId); // The original TS
 
-        if (bundleFile.facadeModuleId) {
-          const sourceFile = await import(bundleFile.facadeModuleId); // The original TS
-
-          this.emitFile({
-            type: 'asset',
-            fileName: bundleFile.fileName.replace('.mjs', '.json'),
-            source: JSON.stringify(sourceFile),
-          });
-        }
+        this.emitFile({
+          type: 'asset',
+          fileName: bundleFile.fileName.replace('.mjs', '.json'),
+          source: JSON.stringify(sourceFile, null, 2),
+        });
       }
     }
   },
 };
 
 export default defineBuildConfig({
-  //   rollup: {
-  //     inlineDependencies: false,
-  //     output: {
-  //       preserveModules: true,
-  //     },
-  //   },
-
   rollup: {
+    inlineDependencies: true,
     output: {
+      minifyInternalExports: true,
+      preserveModules: true,
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore Type instantiation is excessively deep and possibly infinite.
       plugins: [prettierJsonConfig],
     },
