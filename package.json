@@ -25,6 +25,12 @@
       "require": "./dist/presets/node-erbium.cjs",
       "default": "./dist/presets/node-erbium.cjs"
     },
+    "./node-fermium": {
+      "types": "./dist/presets/node-fermium.d.ts",
+      "import": "./dist/presets/node-fermium.mjs",
+      "require": "./dist/presets/node-fermium.cjs",
+      "default": "./dist/presets/node-fermium.cjs"
+    },
     "./rules": {
       "types": "./dist/rules/index.d.ts",
       "import": "./dist/rules/index.mjs",

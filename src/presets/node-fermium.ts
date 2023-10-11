@@ -2,6 +2,9 @@ import { Linter } from 'eslint';
 
 import { baseRules, getImportRules, getNodeRules } from '~/rules';
 
+/**
+ * Config for Node.js 12 (Erbium)
+ */
 const config: Linter.Config = {
   overrides: [
     {
@@ -31,15 +34,10 @@ const config: Linter.Config = {
             { group: 'internal', pattern: '~/**' },
           ],
         }),
-        ...getNodeRules({ nodeVersionRange: '>=16' }),
+        ...getNodeRules({ nodeVersionRange: '^14.0.0' }),
       },
     },
   ],
 };
 
 export default config;
-
-// TODO: Create presets for different versions of node
-// 16.x	Gallium	2021-04-20
-// 18.x	Hydrogen	2023-09-18
-// 20.x	-	2023-09-28
