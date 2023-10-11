@@ -11,13 +11,29 @@ Set of shared ESLint-opinionated configurations for the Joinnus organization.
 yarn add -D @joinnus-team/eslint-config
 ```
 
-Or:
+> Just replace `yarn` with `npm` if you are using it instead.
+
+### Installing with peer dependencies:
+
+You need to make sure that `peerDependencies` are installed.
+
+If you are using a package manager that does not perform this automatically, you'll have to do it manually:
+
+> npm >= 7 `peerDependencies` are installed automatically. If you are using it, ignore this step.
 
 ```sh
-npm add -D @joinnus-team/eslint-config
+yarn add -D @joinnus-team/eslint-config \
+  eslint \
+  eslint-config-prettier \
+  eslint-plugin-import \
+  eslint-plugin-node \
+  eslint-plugin-unicorn \
+  prettier \
+  prettier-plugin-organize-imports \
+  prettier-plugin-pkg
 ```
 
-> Make sure `peerDependencies` are installed (npm >= 7 do this automatically).
+<!-- TODO: Add automatically the peer dependencies in this line -->
 
 ## Usage
 
