@@ -2,6 +2,9 @@ import { Linter } from 'eslint';
 
 import { baseRules, getImportRules, getNodeRules } from '~/rules';
 
+/**
+ * Config for Node.js 16 (Gallium).
+ */
 const config: Linter.Config = {
   overrides: [
     {
@@ -31,7 +34,7 @@ const config: Linter.Config = {
             { group: 'internal', pattern: '~/**' },
           ],
         }),
-        ...getNodeRules({ nodeVersionRange: '>=16' }),
+        ...getNodeRules({ nodeVersionRange: '^18.0.0' }),
       },
     },
   ],

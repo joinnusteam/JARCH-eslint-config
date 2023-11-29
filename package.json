@@ -37,6 +37,18 @@
       "require": "./dist/presets/node-gallium.cjs",
       "default": "./dist/presets/node-gallium.cjs"
     },
+    "./node-hydrogen": {
+      "types": "./dist/presets/node-hydrogen.d.ts",
+      "import": "./dist/presets/node-hydrogen.mjs",
+      "require": "./dist/presets/node-hydrogen.cjs",
+      "default": "./dist/presets/node-hydrogen.cjs"
+    },
+    "./node-iron": {
+      "types": "./dist/presets/node-iron.d.ts",
+      "import": "./dist/presets/node-iron.mjs",
+      "require": "./dist/presets/node-iron.cjs",
+      "default": "./dist/presets/node-iron.cjs"
+    },
     "./rules": {
       "types": "./dist/rules/index.d.ts",
       "import": "./dist/rules/index.mjs",
