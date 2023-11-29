@@ -35,6 +35,9 @@ const config: Linter.Config = {
           ],
         }),
         ...getNodeRules({ nodeVersionRange: '^16.0.0' }),
+
+        // Esto es sólo desde node 18
+        'unicorn/prefer-node-protocol': 'off',
       },
     },
   ],
